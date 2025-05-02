@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, Con
 import yt_dlp
 import os
 
-TOKEN = 'YOUR_BOT_TOKEN_HERE'  # Replace with your token
+TOKEN = os.getenv("TOKEN")# Replace with your token
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Send me a video URL (YouTube, TikTok, Instagram, Facebook).")
